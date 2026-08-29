@@ -1,13 +1,13 @@
 from __future__ import annotations
 
 from langchain_core.messages import HumanMessage
+from langsmith import traceable
 
 from .build_planner_prompt import build_planner_prompt
 from .normalize_plan import normalize_plan
 
 from ...orchestrator_config import AgentConfig
 from ...state import Plan
-
 
 async def create_execution_plan(
     *,
